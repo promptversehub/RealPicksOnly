@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══ PRIMARY SEO ═══ -->
+  <title>RealPicksOnly — Curated Amazon Deals, Wallpapers & Digital Products</title>
+  <meta name="description" content="Hand-curated Amazon affiliate products, free 4K wallpapers, and exclusive digital goods. Real picks, zero fluff. Deals on Tech, Fitness, Health & Grooming." />
+  <meta name="keywords" content="amazon deals india, best tech products, fitness gear, health supplements, grooming products, free 4k wallpapers, digital products, affiliate deals" />
+  <meta name="author" content="RealPicksOnly" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://realpicksonly.github.io/" />
+
+  <!-- ═══ OPEN GRAPH (Social Sharing) ═══ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="RealPicksOnly" />
+  <meta property="og:title" content="RealPicksOnly — Real Picks, Real Value" />
+  <meta property="og:description" content="Curated Amazon deals, free 4K wallpapers, and exclusive digital products. No fluff, just value." />
+  <meta property="og:url" content="https://realpicksonly.github.io/" />
+  <meta property="og:image" content="assets/images/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- ═══ TWITTER CARD ═══ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="RealPicksOnly — Real Picks, Real Value" />
+  <meta name="twitter:description" content="Curated Amazon deals, free 4K wallpapers, and exclusive digital products." />
+  <meta name="twitter:image" content="https://realpicksonly.github.io/assets/images/og-cover.jpg" />
+
+  <!-- ═══ SECURITY: Content Security Policy ═══ -->
+  <!-- Allows fonts from Google, images from anywhere (needed for affiliate product images),
+       scripts only from self. Adjust as needed for analytics integrations. -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self';
+    style-src 'self' https://fonts.googleapis.com;
+    font-src https://fonts.gstatic.com;
+    img-src * data: blob:;
+    connect-src 'self';
+    frame-ancestors 'none';
+    base-uri 'self';
+    form-action 'self' https://formspree.io;
+  " />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
+
+  <!-- ═══ PERFORMANCE: Preload critical resources ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" as="style" />
+
+  <!-- ═══ FONTS ═══ -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ═══ STRUCTURED DATA (JSON-LD for SEO) ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "RealPicksOnly",
+    "url": "https://realpicksonly.github.io/",
+    "description": "Curated Amazon deals, wallpapers, and digital products.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://realpicksonly.github.io/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- ═══ ANALYTICS HOOK (add your GA4 / Plausible ID here) ═══ -->
+  <!-- To add Google Analytics:
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+  -->
+</head>
+
+<body>
+<!-- ═══════════════════════ PAGE LOADER ═════════════════════ -->
+<div id="page-loader" role="status" aria-label="Loading RealPicksOnly">
+  <div class="loader-logo" aria-hidden="true">R<span>P</span>O</div>
+  <div class="loader-bar" aria-hidden="true"><div class="loader-fill"></div></div>
+</div>
+
+<!-- ═══════════════════════ SKIP NAV (A11Y) ════════════════════ -->
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+
+<!-- ═══════════════════════ HEADER / NAVBAR ════════════════════ -->
+<header id="navbar" role="banner">
+  <nav class="nav-container" role="navigation" aria-label="Primary navigation">
+
+    <!-- Logo -->
+    <a href="#" class="nav-logo" data-nav="home" aria-label="RealPicksOnly — Home">
+      <span class="logo-icon" aria-hidden="true">◈</span>
+      <span class="logo-text">RealPicksOnly</span>
+    </a>
+
+    <!-- Desktop Nav -->
+    <ul class="nav-links" id="nav-links" role="menubar" aria-label="Site navigation">
+      <li role="none">
+        <a href="#" class="nav-link active" data-page="home" data-nav="home" role="menuitem">Home</a>
+      </li>
+      <li class="has-dropdown" role="none">
+        <a href="#" class="nav-link" data-page="products" role="menuitem"
+           aria-haspopup="true" aria-expanded="false" id="products-menu">
+          Products <span class="chevron" aria-hidden="true">▾</span>
+        </a>
+        <ul class="dropdown" role="menu" aria-labelledby="products-menu">
+          <li role="none"><a href="#" class="dropdown-link" data-nav="tech" role="menuitem"><span aria-hidden="true">⚡</span> Tech</a></li>
+          <li role="none"><a href="#" class="dropdown-link" data-nav="fitness" role="menuitem"><span aria-hidden="true">💪</span> Fitness</a></li>
+          <li role="none"><a href="#" class="dropdown-link" data-nav="health" role="menuitem"><span aria-hidden="true">🌿</span> Health</a></li>
+          <li role="none"><a href="#" class="dropdown-link" data-nav="grooming" role="menuitem"><span aria-hidden="true">✂️</span> Grooming</a></li>
+          <li role="none"><a href="#" class="dropdown-link" data-nav="home-living" role="menuitem"><span aria-hidden="true">🏠</span> Home &amp; Living</a></li>
+          <li role="none"><a href="#" class="dropdown-link" data-nav="offers" role="menuitem"><span aria-hidden="true">🔥</span> Offers &amp; Deals</a></li>
+        </ul>
+      </li>
+      <li role="none"><a href="#" class="nav-link" data-page="wallpapers" data-nav="wallpapers" role="menuitem">Wallpapers</a></li>
+      <li role="none"><a href="#" class="nav-link" data-page="myproducts" data-nav="myproducts" role="menuitem">My Products</a></li>
+      <li role="none"><a href="#" class="nav-link coming-pill" data-nav="coming-soon" role="menuitem">Coming Soon</a></li>
+    </ul>
+
+    <!-- Controls -->
+    <div class="nav-controls" role="toolbar" aria-label="Site controls">
+      <button class="icon-btn" id="search-toggle" aria-label="Open search" aria-expanded="false" aria-controls="search-bar-wrap">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+      </button>
+      <button class="icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="hamburger icon-btn" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span class="ham-line" aria-hidden="true"></span>
+        <span class="ham-line" aria-hidden="true"></span>
+        <span class="ham-line" aria-hidden="true"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Search Panel -->
+  <div class="search-bar-wrap" id="search-bar-wrap" role="search" aria-label="Site search" aria-hidden="true">
+    <div class="search-inner">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      <input type="search" id="search-input" placeholder="Search products, wallpapers…"
+             autocomplete="off" autocorrect="off" spellcheck="false"
+             aria-label="Search products and wallpapers" role="combobox"
+             aria-autocomplete="list" aria-controls="search-results" aria-expanded="false" />
+      <kbd aria-label="Press Escape to close">ESC</kbd>
+    </div>
+    <div id="search-results" class="search-results" role="listbox" aria-label="Search results" aria-live="polite"></div>
+  </div>
+
+  <!-- Affiliate Disclosure Banner -->
+  <div class="disclosure-bar" id="disclosure-bar" role="note" aria-label="Affiliate disclosure">
+    <p>
+      <span aria-hidden="true">⚡</span>
+      <strong>Affiliate Disclosure:</strong> Some links earn us a small commission — at no extra cost to you.
+      <a href="#" class="nav-link-inline" data-nav="privacy" aria-label="Learn more about our affiliate policy">Learn more</a>
+    </p>
+    <button class="disclosure-close" id="disclosure-close" aria-label="Dismiss affiliate disclosure">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" focusable="false">
+        <path d="M18 6 6 18M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- ═══════════════════════ MAIN CONTENT ═══════════════════════ -->
+<main id="main-content" tabindex="-1">
+
+  <!-- ══════════════════════ HOME ══════════════════════════ -->
+  <section id="page-home" class="page active" aria-label="Home">
+
+    <!-- Hero -->
+    <div class="hero" role="banner">
+      <div class="hero-bg-grid" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-badge" aria-label="Site tagline">
+          <span aria-hidden="true">✦</span> Curated picks, zero fluff
+        </p>
+        <h1 class="hero-title">
+          Only <em>Real</em> Picks.<br aria-hidden="true"/>Only <em>Real</em> Value.
+        </h1>
+        <p class="hero-sub">Hand-curated Amazon products, premium wallpapers, and exclusive digital goods — all in one place.</p>
+        <div class="hero-cta">
+          <button class="btn-primary" data-nav="offers" aria-label="See today's deals">
+            <span aria-hidden="true">🔥</span> See Today's Deals
+          </button>
+          <button class="btn-ghost" data-nav="wallpapers" aria-label="Browse wallpapers">
+            <span aria-hidden="true">🖼</span> Browse Wallpapers
+          </button>
+        </div>
+        <div class="hero-stats" aria-label="Site statistics">
+          <div class="stat">
+            <strong id="stat-products" aria-live="polite">0</strong>
+            <span>Products</span>
+          </div>
+          <div class="stat-div" aria-hidden="true"></div>
+          <div class="stat">
+            <strong id="stat-wallpapers" aria-live="polite">0</strong>
+            <span>Wallpapers</span>
+          </div>
+          <div class="stat-div" aria-hidden="true"></div>
+          <div class="stat">
+            <strong>100%</strong>
+            <span>Handpicked</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="floating-card fc1">
+          <div class="fc-label">🔥 Trending</div>
+          <div class="fc-title">Best Tech Picks</div>
+          <div class="fc-stat">↑ 238 clicks today</div>
+        </div>
+        <div class="floating-card fc2">
+          <div class="fc-label">💸 Deal</div>
+          <div class="fc-title">Up to 72% OFF</div>
+          <div class="fc-stat">Limited time offer</div>
+        </div>
+        <div class="floating-card fc3">
+          <div class="fc-label">🖼 New</div>
+          <div class="fc-title">4K Wallpapers</div>
+          <div class="fc-stat">Free download</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category Quick Nav -->
+    <section class="section" aria-labelledby="cat-heading">
+      <div class="container">
+        <h2 class="section-title" id="cat-heading">Browse Categories</h2>
+        <div class="cat-grid" role="list" aria-label="Product categories">
+          <div class="cat-card" role="listitem" data-nav="tech" tabindex="0" aria-label="Browse Tech products">
+            <div class="cat-icon" aria-hidden="true">⚡</div>
+            <div class="cat-name">Tech</div>
+            <div class="cat-count" id="cat-count-tech" aria-live="polite">— items</div>
+          </div>
+          <div class="cat-card" role="listitem" data-nav="fitness" tabindex="0" aria-label="Browse Fitness products">
+            <div class="cat-icon" aria-hidden="true">💪</div>
+            <div class="cat-name">Fitness</div>
+            <div class="cat-count" id="cat-count-fitness" aria-live="polite">— items</div>
+          </div>
+          <div class="cat-card" role="listitem" data-nav="health" tabindex="0" aria-label="Browse Health products">
+            <div class="cat-icon" aria-hidden="true">🌿</div>
+            <div class="cat-name">Health</div>
+            <div class="cat-count" id="cat-count-health" aria-live="polite">— items</div>
+          </div>
+          <div class="cat-card" role="listitem" data-nav="grooming" tabindex="0" aria-label="Browse Grooming products">
+            <div class="cat-icon" aria-hidden="true">✂️</div>
+            <div class="cat-name">Grooming</div>
+            <div class="cat-count" id="cat-count-grooming" aria-live="polite">— items</div>
+          </div>
+          <div class="cat-card" role="listitem" data-nav="home-living" tabindex="0" aria-label="Browse Home and Living products">
+            <div class="cat-icon" aria-hidden="true">🏠</div>
+            <div class="cat-name">Home &amp; Living</div>
+            <div class="cat-count" id="cat-count-home" aria-live="polite">— items</div>
+          </div>
+          <div class="cat-card" role="listitem" data-nav="offers" tabindex="0" aria-label="Browse Offers and Deals">
+            <div class="cat-icon" aria-hidden="true">🏷️</div>
+            <div class="cat-name">Offers</div>
+            <div class="cat-count">Hot deals</div>
+          </div>
+          <div class="cat-card" role="listitem" data-nav="wallpapers" tabindex="0" aria-label="Browse Wallpapers">
+            <div class="cat-icon" aria-hidden="true">🖼️</div>
+            <div class="cat-name">Wallpapers</div>
+            <div class="cat-count">4K + Mobile</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trending -->
+    <section class="section" aria-labelledby="trending-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" id="trending-heading"><span aria-hidden="true">🔥</span> Trending Now</h2>
+          <a href="#" class="see-all" data-nav="offers" aria-label="See all trending products">See all <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="products-grid" id="trending-grid" aria-live="polite" aria-label="Trending products"></div>
+      </div>
+    </section>
+
+    <!-- Best Deals -->
+    <section class="section section-alt" aria-labelledby="deals-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" id="deals-heading"><span aria-hidden="true">💸</span> Best Deals</h2>
+          <a href="#" class="see-all" data-nav="offers" aria-label="See all deals">See all <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="products-grid" id="deals-grid" aria-live="polite" aria-label="Best deals"></div>
+      </div>
+    </section>
+
+    <!-- Budget Picks -->
+    <section class="section" aria-labelledby="budget-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" id="budget-heading"><span aria-hidden="true">🪙</span> Budget Picks</h2>
+          <span class="badge-pill">Under ₹999</span>
+        </div>
+        <div class="products-grid" id="budget-grid" aria-live="polite" aria-label="Budget friendly products"></div>
+      </div>
+    </section>
+
+    <!-- Featured Wallpapers -->
+    <section class="section section-alt" aria-labelledby="featured-walls-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" id="featured-walls-heading"><span aria-hidden="true">🖼</span> Featured Wallpapers</h2>
+          <a href="#" class="see-all" data-nav="wallpapers" aria-label="See all wallpapers">See all <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="wallpaper-grid" id="featured-wallpapers" aria-live="polite" aria-label="Featured wallpapers"></div>
+      </div>
+    </section>
+
+    <!-- Coming Soon Teaser -->
+    <section class="section coming-teaser" aria-labelledby="teaser-heading">
+      <div class="container">
+        <div class="teaser-card">
+          <div class="teaser-badge" aria-hidden="true">Coming Soon</div>
+          <h2 id="teaser-heading">Something Big is Brewing <span aria-hidden="true">☕</span></h2>
+          <p>Exclusive digital tools, AI-powered product guides, and member-only deals are on the way.</p>
+          <div class="email-sub-form" role="form" aria-label="Email subscription">
+            <label for="home-email" class="sr-only">Email address for early access</label>
+            <input type="email" id="home-email" placeholder="Enter your email for early access…"
+                   autocomplete="email" aria-required="true" />
+            <button type="button" class="btn-primary" data-subscribe aria-label="Subscribe for early access notifications">
+              Notify Me
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </section>
+
+  <!-- ══════════════════════ CATEGORY PAGES ══════════════════════ -->
+  <section id="page-tech" class="page" aria-label="Tech Products">
+    <div class="page-hero cat-hero tech-hero">
+      <h1><span aria-hidden="true">⚡</span> Tech Products</h1>
+      <p>Gadgets, accessories, and essentials — tested &amp; trusted.</p>
+    </div>
+    <div class="container section">
+      <div id="filter-bar-tech" class="filter-bar" role="toolbar" aria-label="Filter and sort tech products"></div>
+      <div class="products-grid" id="grid-tech" aria-live="polite" aria-label="Tech products"></div>
+    </div>
+  </section>
+
+  <section id="page-fitness" class="page" aria-label="Fitness Products">
+    <div class="page-hero cat-hero fitness-hero">
+      <h1><span aria-hidden="true">💪</span> Fitness Products</h1>
+      <p>Level up your workout with the best gear around.</p>
+    </div>
+    <div class="container section">
+      <div id="filter-bar-fitness" class="filter-bar" role="toolbar" aria-label="Filter and sort fitness products"></div>
+      <div class="products-grid" id="grid-fitness" aria-live="polite" aria-label="Fitness products"></div>
+    </div>
+  </section>
+
+  <section id="page-health" class="page" aria-label="Health Products">
+    <div class="page-hero cat-hero health-hero">
+      <h1><span aria-hidden="true">🌿</span> Health Products</h1>
+      <p>Take care of your body — supplements, wellness &amp; more.</p>
+    </div>
+    <div class="container section">
+      <div id="filter-bar-health" class="filter-bar" role="toolbar" aria-label="Filter and sort health products"></div>
+      <div class="products-grid" id="grid-health" aria-live="polite" aria-label="Health products"></div>
+    </div>
+  </section>
+
+  <section id="page-grooming" class="page" aria-label="Grooming Products">
+    <div class="page-hero cat-hero grooming-hero">
+      <h1><span aria-hidden="true">✂️</span> Grooming</h1>
+      <p>Look your best — for every style and every person.</p>
+    </div>
+    <div class="container section">
+      <div class="grooming-tabs" role="tablist" aria-label="Filter grooming by gender">
+        <button class="gtab active" role="tab" aria-selected="true" data-groom="all">All</button>
+        <button class="gtab" role="tab" aria-selected="false" data-groom="men"><span aria-hidden="true">👨</span> Men</button>
+        <button class="gtab" role="tab" aria-selected="false" data-groom="women"><span aria-hidden="true">👩</span> Women</button>
+      </div>
+      <div id="filter-bar-grooming" class="filter-bar" role="toolbar" aria-label="Filter and sort grooming products"></div>
+      <div class="products-grid" id="grid-grooming" aria-live="polite" aria-label="Grooming products"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ HOME & LIVING ═════════════════ -->
+  <section id="page-home-living" class="page" aria-label="Home and Living Products">
+    <div class="page-hero cat-hero home-hero">
+      <h1><span aria-hidden="true">🏠</span> Home &amp; Living</h1>
+      <p>Bottles, bedding, chairs, appliances &amp; everyday essentials.</p>
+    </div>
+    <div class="container section">
+      <div class="home-tabs" role="tablist" aria-label="Filter by subcategory">
+        <button class="gtab active" role="tab" aria-selected="true" data-home-sub="all">All</button>
+        <button class="gtab" role="tab" aria-selected="false" data-home-sub="bottles"><span aria-hidden="true">🍶</span> Bottles</button>
+        <button class="gtab" role="tab" aria-selected="false" data-home-sub="kitchen"><span aria-hidden="true">🍳</span> Kitchen</button>
+        <button class="gtab" role="tab" aria-selected="false" data-home-sub="bedding"><span aria-hidden="true">🛏</span> Bedding</button>
+        <button class="gtab" role="tab" aria-selected="false" data-home-sub="furniture"><span aria-hidden="true">🪑</span> Furniture</button>
+        <button class="gtab" role="tab" aria-selected="false" data-home-sub="appliances"><span aria-hidden="true">🌀</span> Appliances</button>
+        <button class="gtab" role="tab" aria-selected="false" data-home-sub="storage"><span aria-hidden="true">📦</span> Storage</button>
+      </div>
+      <div id="filter-bar-home-living" class="filter-bar" role="toolbar" aria-label="Filter and sort home products"></div>
+      <div class="products-grid" id="grid-home-living" aria-live="polite" aria-label="Home and Living products"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ OFFERS ═══════════════════════ -->
+  <section id="page-offers" class="page" aria-label="Offers and Deals">
+    <div class="page-hero offers-hero">
+      <h1><span aria-hidden="true">🏷️</span> Offers &amp; Deals</h1>
+      <p>Biggest discounts, hottest products — refreshed daily.</p>
+    </div>
+    <div class="container section">
+      <div class="deals-tabs" role="tablist" aria-label="Filter deals">
+        <button class="gtab active" role="tab" aria-selected="true" data-offer="all">All Deals</button>
+        <button class="gtab" role="tab" aria-selected="false" data-offer="best"><span aria-hidden="true">💸</span> Best Discount</button>
+        <button class="gtab" role="tab" aria-selected="false" data-offer="trending"><span aria-hidden="true">🔥</span> Trending</button>
+        <button class="gtab" role="tab" aria-selected="false" data-offer="budget"><span aria-hidden="true">🪙</span> Budget</button>
+      </div>
+      <div id="filter-bar-offers" class="filter-bar" role="toolbar" aria-label="Sort deals"></div>
+      <div class="products-grid" id="grid-offers" aria-live="polite" aria-label="Deals and offers"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ WALLPAPERS ════════════════════ -->
+  <section id="page-wallpapers" class="page" aria-label="Wallpapers">
+    <div class="page-hero wallpaper-hero">
+      <h1><span aria-hidden="true">🖼</span> Wallpapers</h1>
+      <p>Free 4K &amp; mobile wallpapers — AI-generated &amp; curated.</p>
+    </div>
+    <div class="container section">
+      <div class="wallpaper-tabs" role="tablist" aria-label="Filter wallpapers by type">
+        <button class="gtab active" role="tab" aria-selected="true" data-wall="all">All</button>
+        <button class="gtab" role="tab" aria-selected="false" data-wall="desktop"><span aria-hidden="true">🖥</span> Desktop</button>
+        <button class="gtab" role="tab" aria-selected="false" data-wall="mobile"><span aria-hidden="true">📱</span> Mobile</button>
+        <button class="gtab" role="tab" aria-selected="false" data-wall="ai"><span aria-hidden="true">✨</span> AI Generated</button>
+      </div>
+      <div class="wallpaper-grid" id="grid-wallpapers" aria-live="polite" aria-label="Wallpapers gallery"></div>
+    </div>
+
+    <!-- Wallpaper Modal -->
+    <div class="modal" id="wallpaper-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+      <div class="modal-backdrop" id="modal-backdrop" aria-hidden="true"></div>
+      <div class="modal-box" role="document">
+        <button class="modal-close" id="modal-close" aria-label="Close wallpaper preview">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" focusable="false">
+            <path d="M18 6 6 18M6 6l12 12"/>
+          </svg>
+        </button>
+        <img id="modal-img" src="" alt="" />
+        <div class="modal-info">
+          <h3 id="modal-title"></h3>
+          <p class="modal-meta" id="modal-meta"></p>
+          <a id="modal-download" class="btn-primary" download>
+            <span aria-hidden="true">⬇</span> Download Free
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ MY PRODUCTS ═══════════════════ -->
+  <section id="page-myproducts" class="page" aria-label="My Digital Products">
+    <div class="page-hero myproducts-hero">
+      <h1><span aria-hidden="true">🎁</span> My Products</h1>
+      <p>Exclusive digital products crafted just for you.</p>
+    </div>
+    <div class="container section">
+      <div class="my-products-grid" id="grid-myproducts" aria-live="polite" aria-label="Digital products for sale"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ COMING SOON ═══════════════════ -->
+  <section id="page-coming-soon" class="page" aria-label="Coming Soon">
+    <div class="coming-soon-wrap">
+      <div class="cs-content">
+        <p class="cs-badge">In Progress</p>
+        <h1 class="cs-title">Something<br/><em>Epic</em> is Coming</h1>
+        <p class="cs-sub">We're building something special. Stay tuned for exclusive deals, digital tools, and premium content.</p>
+        <ul class="cs-features" aria-label="Upcoming features">
+          <li class="cs-feat"><span aria-hidden="true">🤖</span> AI Product Guides</li>
+          <li class="cs-feat"><span aria-hidden="true">📦</span> Member-Only Deals</li>
+          <li class="cs-feat"><span aria-hidden="true">🎨</span> Custom Wallpaper Packs</li>
+          <li class="cs-feat"><span aria-hidden="true">📊</span> Price Tracker</li>
+        </ul>
+        <div class="email-sub-form large" role="form" aria-label="Early access subscription">
+          <label for="cs-email" class="sr-only">Email address for early access</label>
+          <input type="email" id="cs-email" placeholder="Your email address…"
+                 autocomplete="email" aria-required="true" />
+          <button type="button" class="btn-primary" data-subscribe aria-label="Get early access">
+            Get Early Access
+          </button>
+        </div>
+        <p class="cs-note">No spam, ever. Unsubscribe anytime.</p>
+        <button type="button" class="btn-ghost mt-2" data-nav="home">← Back to Home</button>
+      </div>
+      <div class="cs-visual" aria-hidden="true">
+        <div class="cs-ring r1"></div>
+        <div class="cs-ring r2"></div>
+        <div class="cs-ring r3"></div>
+        <div class="cs-center">RPO</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ PRIVACY ═══════════════════════ -->
+  <section id="page-privacy" class="page" aria-label="Privacy Policy and Legal">
+    <div class="container section legal-page">
+      <h1>Privacy Policy &amp; Affiliate Disclosure</h1>
+      <p class="last-updated">Last updated: <time datetime="2025-03">March 2025</time></p>
+
+      <h2>Affiliate Disclosure</h2>
+      <p>RealPicksOnly participates in the Amazon Associates Program and other affiliate programs. When you click on links on this site and make a purchase, we may earn a small commission at <strong>no additional cost to you</strong>. This helps us keep the site running and curate better picks for you.</p>
+      <p>All product recommendations are based on genuine research and personal opinion. We only recommend products we believe offer real value.</p>
+
+      <h2>Privacy Policy</h2>
+      <p>We respect your privacy. This site does not collect personal information unless you voluntarily provide it (e.g., email subscription). We do not sell or share your data with third parties.</p>
+
+      <h2>Data We Store</h2>
+      <p>This site uses <code>localStorage</code> in your browser to save your theme preference (dark/light mode) and click counts for trending product sorting. This data never leaves your device and is never transmitted to any server.</p>
+
+      <h2>Cookies</h2>
+      <p>No tracking cookies are set by this site. If you subscribe via a third-party form service (Formspree), their privacy policy applies.</p>
+
+      <h2>External Links</h2>
+      <p>This site contains links to Amazon and other third-party websites. All external links open in a new tab with <code>rel="noopener noreferrer"</code> for your security. We are not responsible for the content or privacy practices of external sites.</p>
+
+      <h2>Children's Privacy</h2>
+      <p>This site is not directed at children under 13. We do not knowingly collect any data from children.</p>
+
+      <h2>Contact</h2>
+      <p>If you have questions about this policy, please reach out via our social channels listed in the footer.</p>
+
+      <button type="button" class="btn-ghost" data-nav="home">← Back to Home</button>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ TERMS ═════════════════════════ -->
+  <section id="page-terms" class="page" aria-label="Terms and Conditions">
+    <div class="container section legal-page">
+      <h1>Terms &amp; Conditions</h1>
+      <p class="last-updated">Last updated: <time datetime="2025-03">March 2025</time></p>
+
+      <h2>Acceptance of Terms</h2>
+      <p>By accessing RealPicksOnly, you agree to these terms. If you do not agree, please discontinue use of the site.</p>
+
+      <h2>Affiliate Links</h2>
+      <p>This site contains affiliate links to Amazon and other platforms. Clicking these links may result in a commission for us at no cost to you. Product prices and availability are subject to change; always verify on the retailer's site before purchasing.</p>
+
+      <h2>Accuracy of Information</h2>
+      <p>We strive to keep product information accurate, but prices, discounts, and availability can change. We make no guarantees about the accuracy of third-party pricing data.</p>
+
+      <h2>Intellectual Property</h2>
+      <p>All original content on this site (wallpapers marked as original, copy, design) is the property of RealPicksOnly. Wallpapers provided for download may be used for personal use only unless otherwise stated.</p>
+
+      <h2>Limitation of Liability</h2>
+      <p>RealPicksOnly is not liable for any damages arising from your use of this site or purchases made through affiliate links. All purchases are between you and the respective retailer.</p>
+
+      <h2>Changes to Terms</h2>
+      <p>We may update these terms at any time. Continued use of the site constitutes acceptance of updated terms.</p>
+
+      <button type="button" class="btn-ghost" data-nav="home">← Back to Home</button>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════════════════════ FOOTER ══════════════════════════ -->
+<footer id="footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="#" class="nav-logo footer-logo" data-nav="home" aria-label="RealPicksOnly — Go to homepage">
+        <span class="logo-icon" aria-hidden="true">◈</span> RealPicksOnly
+      </a>
+      <p>Real picks. Real value. No fluff, ever.</p>
+      <nav aria-label="Social media links">
+        <div class="social-links">
+          <a href="#" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Follow us on X (Twitter)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Watch us on YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="#" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <div class="footer-col">
+        <h3>Products</h3>
+        <a href="#" data-nav="tech">Tech</a>
+        <a href="#" data-nav="fitness">Fitness</a>
+        <a href="#" data-nav="health">Health</a>
+        <a href="#" data-nav="grooming">Grooming</a>
+        <a href="#" data-nav="offers">Offers &amp; Deals</a>
+      </div>
+      <div class="footer-col">
+        <h3>Resources</h3>
+        <a href="#" data-nav="wallpapers">Wallpapers</a>
+        <a href="#" data-nav="myproducts">My Products</a>
+        <a href="#" data-nav="coming-soon">Coming Soon</a>
+      </div>
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <a href="#" data-nav="privacy">Privacy Policy</a>
+        <a href="#" data-nav="privacy">Affiliate Disclosure</a>
+        <a href="#" data-nav="terms">Terms &amp; Conditions</a>
+      </div>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span id="footer-year">2025</span> RealPicksOnly. Made with <span aria-label="love">❤️</span> in India.
+      <a href="#" data-nav="privacy">Affiliate Disclosure</a>
+    </p>
+  </div>
+</footer>
+
+<!-- ═══════════════════════ SCROLL TOP ══════════════════════ -->
+<button id="scroll-top" aria-label="Scroll back to top" title="Back to top">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" focusable="false">
+    <path d="m18 15-6-6-6 6"/>
+  </svg>
+</button>
+
+<!-- ═══════════════════════ SCRIPTS ═════════════════════════ -->
+<!-- Category data files — each file has its own array -->
+<script src="data/products-tech.js"></script>
+<script src="data/products-fitness.js"></script>
+<script src="data/products-health.js"></script>
+<script src="data/products-grooming.js"></script>
+<script src="data/products-home.js"></script>
+<!-- products-index.js merges all arrays into PRODUCTS — must be last -->
+<script src="data/products-index.js"></script>
+<script src="data/wallpapers.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
