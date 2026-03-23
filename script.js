@@ -9,7 +9,7 @@
  *  3. Real per-product click tracking with localStorage,
  *     live counter updates on card, and a hidden admin
  *     dashboard (press Shift+Ctrl+D to open).
- * ─────────────────────────────────────────────────────────
+ * ───────────────────────────────────────────────────v──────
  */
 
 'use strict';
@@ -66,7 +66,7 @@ const ClickTracker = {
 
   /** Total clicks = base (from products.js) + real tracked clicks */
   getTotal(productId) {
-  return PRODUCTS.find(p => p.id === productId)?.clicks || 0;
+  return this._data[productId] || 0;
 },
 
   /** Real tracked clicks only (what real visitors have clicked) */
