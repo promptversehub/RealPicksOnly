@@ -1055,7 +1055,7 @@ const Nav = {
   }
 
   // Send to Formspree
-  fetch('https://formspree.io/f/mlgpyzrgf', {
+  fetch('https://formspree.io/f/mlgpyzrg', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
