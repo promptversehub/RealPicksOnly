@@ -392,9 +392,23 @@ const Cards = {
         html: '\uD83D\uDD14 Notify Me',
         attrs: { type: 'button', style: 'width:100%;justify-content:center;' },
       });
-      cta.addEventListener('click', () =>
-        Toast.show("Added to waitlist! We'll notify you.", 'success')
-      );
+      cta.addEventListener('click', () => {
+  const email = prompt('Enter your email to get notified:');
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
+    Toast.show('Please enter a valid email.', 'error');
+    return;
+  }
+  fetch('https://formspree.io/f/mlgpyzrg', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      email: email.trim(),
+      source: 'RealPicksOnly — product: ' + p.title,
+    }),
+  })
+  .then(() => Toast.show('✓ Added to waitlist! We will notify you.', 'success'))
+  .catch(() => Toast.show('Something went wrong. Try again.', 'error'));
+});
     }
 
     const card = DOM.el('article', {
@@ -1020,23 +1034,49 @@ const Nav = {
   },
 
   _handleSubscribe(btn) {
-    const form  = btn.closest('[role="form"], .email-sub-form');
-    const input = form && form.querySelector('input[type="email"]');
-    if (!input) return;
-    const raw = input.value.trim();
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(raw)) {
-      Toast.show('Please enter a valid email address.', 'error');
-      input.focus(); return;
-    }
-    Toast.show("You're on the list! We'll be in touch.", 'success');
+  const form  = btn.closest('[role="form"], .email-sub-form');
+  const input = form && form.querySelector('input[type="email"]');
+  if (!input) return;
+
+  const raw = input.value.trim();
+
+  // Block empty submissions
+  if (!raw) {
+    Toast.show('Please enter your email first.', 'error');
+    input.focus();
+    return;
+  }
+
+  // Validate email format
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(raw)) {
+    Toast.show('Please enter a valid email address.', 'error');
+    input.focus();
+    return;
+  }
+
+  // Send to Formspree
+  fetch('https://formspree.io/f/mlgpyzrgf', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      email: raw,
+      source: 'RealPicksOnly — notify button',
+    }),
+  })
+  .then(() => {
+    Toast.show('✓ Subscribed! You will be notified.', 'success');
     input.value = '';
-    DOM.setText(btn, 'Subscribed!');
+    DOM.setText(btn, '✓ Subscribed!');
     btn.setAttribute('disabled', 'true');
-    setTimeout(function() {
+    setTimeout(() => {
       DOM.setText(btn, 'Notify Me');
       btn.removeAttribute('disabled');
     }, 5000);
-  },
+  })
+  .catch(() => {
+    Toast.show('Something went wrong. Try again.', 'error');
+  });
+},
 };
 
 /* ═══════════════════════════════════════════════════════════
