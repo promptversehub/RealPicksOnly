@@ -1057,11 +1057,15 @@ const Nav = {
   // Send to Formspree
   fetch('https://formspree.io/f/mlgpyzrg', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      email: raw,
-      source: 'RealPicksOnly — notify button',
-    }),
+    headers: { 
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+},
+    // REPLACE WITH:
+   body: JSON.stringify({
+   email: raw,
+   message: 'Subscribed via RealPicksOnly notify button',
+   }),
   })
   .then(() => {
     Toast.show('✓ Subscribed! You will be notified.', 'success');
