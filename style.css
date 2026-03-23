@@ -402,8 +402,8 @@ input, select { font-family: var(--font-body); }
     linear-gradient(var(--border) 1px, transparent 1px),
     linear-gradient(90deg, var(--border) 1px, transparent 1px);
   background-size: 56px 56px;
-  mask-image: radial-gradient(ellipse 100% 90% at center, black 10%, transparent 70%);
   -webkit-mask-image: radial-gradient(ellipse 100% 90% at center, black 10%, transparent 70%);
+   mask-image: radial-gradient(ellipse 100% 90% at center, black 10%, transparent 70%);
 }
 .hero-orb {
   position: absolute; border-radius: 50%; pointer-events: none;
