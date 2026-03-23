@@ -907,7 +907,8 @@ input, select { font-family: var(--font-body); }
   border-radius: inherit; padding: 1px;
   background: linear-gradient(135deg, rgba(245,166,35,0.25), rgba(232,66,110,0.25), transparent 60%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor; mask-composite: exclude;
+mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+-webkit-mask-composite: xor; mask-composite: exclude;
   pointer-events: none;
 }
 .teaser-badge {
@@ -1093,7 +1094,14 @@ input, select { font-family: var(--font-body); }
   .hero-visual { display: none; }
   .footer-inner { grid-template-columns: 1fr; gap: var(--sp-10); }
 }
-
+/* Mobile nav backdrop */
+#nav-backdrop {
+  display: block; position: fixed; inset: 0; z-index: 790;
+  background: rgba(0,0,0,0.45); backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  opacity: 0; transition: opacity 0.25s ease; cursor: pointer;
+}
+#nav-backdrop.visible { opacity: 1; }
 @media (max-width: 768px) {
   :root { --nav-h: 60px; }
   #main-content { padding-top: calc(var(--nav-h) + 68px); }
