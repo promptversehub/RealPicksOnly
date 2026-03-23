@@ -167,7 +167,7 @@ const MY_PRODUCTS = [
     description: "A comprehensive Notion workspace with habit tracker, goal planner, and project management system.",
     price: 149,
     image: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80",
-    status: "available",
+    status: "coming-soon",
     buyLink: "#",
     tags: ["notion", "productivity", "template"]
   },
@@ -177,7 +177,7 @@ const MY_PRODUCTS = [
     description: "50 premium AI-generated wallpapers in 4K resolution. AMOLED, nature, cyberpunk and more.",
     price: 99,
     image: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=600&q=80",
-    status: "available",
+    status: "coming-soon",
     buyLink: "#",
     tags: ["wallpapers", "ai", "4k"]
   },
@@ -187,7 +187,7 @@ const MY_PRODUCTS = [
     description: "Easy-to-use personal finance tracker. Track income, expenses, savings goals automatically.",
     price: 79,
     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80",
-    status: "available",
+    status: "coming-soon",
     buyLink: "#",
     tags: ["finance", "tracker", "excel"]
   },
