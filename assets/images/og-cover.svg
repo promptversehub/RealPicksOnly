@@ -1,0 +1,198 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;800&amp;display=swap');
+    </style>
+    <linearGradient id="bgMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#080810"/>
+      <stop offset="100%" style="stop-color:#0e0e1a"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f5c842"/>
+      <stop offset="100%" style="stop-color:#f5a623"/>
+    </linearGradient>
+    <linearGradient id="accentGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5a623;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#e8426e;stop-opacity:0.06"/>
+    </linearGradient>
+    <linearGradient id="pinkGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5a623"/>
+      <stop offset="100%" style="stop-color:#e8426e"/>
+    </linearGradient>
+    <radialGradient id="orb1" cx="70%" cy="30%" r="40%">
+      <stop offset="0%" style="stop-color:#f5a623;stop-opacity:0.08"/>
+      <stop offset="100%" style="stop-color:#f5a623;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="orb2" cx="20%" cy="80%" r="35%">
+      <stop offset="0%" style="stop-color:#e8426e;stop-opacity:0.06"/>
+      <stop offset="100%" style="stop-color:#e8426e;stop-opacity:0"/>
+    </radialGradient>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="iconGlow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Base background -->
+  <rect width="1200" height="630" fill="url(#bgMain)"/>
+
+  <!-- Ambient orbs -->
+  <rect width="1200" height="630" fill="url(#orb1)"/>
+  <rect width="1200" height="630" fill="url(#orb2)"/>
+
+  <!-- Grid pattern -->
+  <defs>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#ffffff" stroke-width="0.4" stroke-opacity="0.04"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Top border accent line -->
+  <rect x="0" y="0" width="1200" height="3" fill="url(#goldGrad)"/>
+
+  <!-- Left decorative column -->
+  <rect x="80" y="0" width="1" height="630" fill="#f5a623" fill-opacity="0.06"/>
+
+  <!-- Right decorative column -->
+  <rect x="1120" y="0" width="1" height="630" fill="#f5a623" fill-opacity="0.06"/>
+
+  <!-- ── ICON MARK (left side) ── -->
+  <g transform="translate(200, 315)" filter="url(#iconGlow)">
+    <!-- Outer ring -->
+    <circle cx="0" cy="0" r="72" fill="none" stroke="url(#goldGrad)" stroke-width="1" stroke-opacity="0.2"/>
+    <!-- Mid ring -->
+    <circle cx="0" cy="0" r="52" fill="none" stroke="url(#goldGrad)" stroke-width="0.8" stroke-opacity="0.3"/>
+    <!-- Diamond outer -->
+    <polygon points="0,-44 38,0 0,44 -38,0"
+      fill="url(#accentGlow)" stroke="url(#goldGrad)" stroke-width="1.5" stroke-opacity="0.5"/>
+    <!-- Diamond inner -->
+    <polygon points="0,-24 20,0 0,24 -20,0"
+      fill="none" stroke="url(#goldGrad)" stroke-width="1.5" stroke-opacity="0.8"/>
+    <!-- Center gem -->
+    <circle cx="0" cy="0" r="7" fill="url(#goldGrad)"/>
+    <circle cx="0" cy="0" r="3.5" fill="#fff" fill-opacity="0.6"/>
+    <!-- Cross hairs -->
+    <line x1="-44" y1="0" x2="-22" y2="0" stroke="url(#goldGrad)" stroke-width="1.5" stroke-opacity="0.6" stroke-linecap="round"/>
+    <line x1="22"  y1="0" x2="44"  y2="0" stroke="url(#goldGrad)" stroke-width="1.5" stroke-opacity="0.6" stroke-linecap="round"/>
+    <line x1="0" y1="-44" x2="0" y2="-22" stroke="url(#goldGrad)" stroke-width="1.5" stroke-opacity="0.6" stroke-linecap="round"/>
+    <line x1="0" y1="22"  x2="0" y2="44"  stroke="url(#goldGrad)" stroke-width="1.5" stroke-opacity="0.6" stroke-linecap="round"/>
+    <!-- Corner dots -->
+    <circle cx="0"  cy="-44" r="2.5" fill="url(#goldGrad)" fill-opacity="0.7"/>
+    <circle cx="0"  cy="44"  r="2.5" fill="url(#goldGrad)" fill-opacity="0.7"/>
+    <circle cx="-44" cy="0"  r="2.5" fill="url(#goldGrad)" fill-opacity="0.7"/>
+    <circle cx="44"  cy="0"  r="2.5" fill="url(#goldGrad)" fill-opacity="0.7"/>
+  </g>
+
+  <!-- ── DIVIDER ── -->
+  <line x1="320" y1="160" x2="320" y2="470" stroke="#f5a623" stroke-width="1" stroke-opacity="0.12"/>
+
+  <!-- ── MAIN TEXT (right of divider) ── -->
+
+  <!-- Badge pill -->
+  <rect x="360" y="148" width="240" height="34" rx="17" fill="#f5a623" fill-opacity="0.1"/>
+  <rect x="360" y="148" width="240" height="34" rx="17" fill="none" stroke="#f5a623" stroke-width="1" stroke-opacity="0.3"/>
+  <circle cx="382" cy="165" r="5" fill="#f5a623"/>
+  <text x="398" y="170"
+    font-family="Syne, system-ui, sans-serif"
+    font-weight="600"
+    font-size="13"
+    letter-spacing="3"
+    fill="#f5a623">CURATED PICKS</text>
+
+  <!-- Main headline line 1 -->
+  <text x="360" y="270"
+    font-family="Syne, system-ui, sans-serif"
+    font-weight="800"
+    font-size="86"
+    letter-spacing="-3"
+    fill="#f2f2f5">Real</text>
+
+  <!-- Main headline line 2 - gold -->
+  <text x="360" y="360"
+    font-family="Syne, system-ui, sans-serif"
+    font-weight="800"
+    font-size="86"
+    letter-spacing="-3"
+    fill="url(#goldGrad)">Picks</text>
+
+  <!-- Main headline line 3 -->
+  <text x="360" y="438"
+    font-family="Syne, system-ui, sans-serif"
+    font-weight="800"
+    font-size="86"
+    letter-spacing="-3"
+    fill="#f2f2f5"
+    fill-opacity="0.22">Only.</text>
+
+  <!-- Tagline -->
+  <text x="362" y="490"
+    font-family="Syne, system-ui, sans-serif"
+    font-weight="600"
+    font-size="18"
+    letter-spacing="0.5"
+    fill="#f2f2f5"
+    fill-opacity="0.45">Amazon deals · Wallpapers · Digital products</text>
+
+  <!-- ── RIGHT SIDE — Feature pills ── -->
+  <g transform="translate(860, 180)">
+    <!-- Pill 1 -->
+    <rect x="0" y="0" width="230" height="52" rx="12" fill="#111120"/>
+    <rect x="0" y="0" width="230" height="52" rx="12" fill="none" stroke="#f5a623" stroke-width="1" stroke-opacity="0.18"/>
+    <text x="20" y="22" font-family="Syne, system-ui, sans-serif" font-weight="700" font-size="12" letter-spacing="1.5" fill="#f5a623" fill-opacity="0.7">TECH</text>
+    <text x="20" y="40" font-family="Syne, system-ui, sans-serif" font-weight="600" font-size="14" fill="#f2f2f5" fill-opacity="0.8">Gadgets &amp; Accessories</text>
+
+    <!-- Pill 2 -->
+    <rect x="0" y="68" width="230" height="52" rx="12" fill="#111120"/>
+    <rect x="0" y="68" width="230" height="52" rx="12" fill="none" stroke="#f5a623" stroke-width="1" stroke-opacity="0.18"/>
+    <text x="20" y="90" font-family="Syne, system-ui, sans-serif" font-weight="700" font-size="12" letter-spacing="1.5" fill="#f5a623" fill-opacity="0.7">FITNESS</text>
+    <text x="20" y="108" font-family="Syne, system-ui, sans-serif" font-weight="600" font-size="14" fill="#f2f2f5" fill-opacity="0.8">Gym &amp; Workout Gear</text>
+
+    <!-- Pill 3 -->
+    <rect x="0" y="136" width="230" height="52" rx="12" fill="#111120"/>
+    <rect x="0" y="136" width="230" height="52" rx="12" fill="none" stroke="#e8426e" stroke-width="1" stroke-opacity="0.18"/>
+    <text x="20" y="158" font-family="Syne, system-ui, sans-serif" font-weight="700" font-size="12" letter-spacing="1.5" fill="#e8426e" fill-opacity="0.7">DEALS</text>
+    <text x="20" y="176" font-family="Syne, system-ui, sans-serif" font-weight="600" font-size="14" fill="#f2f2f5" fill-opacity="0.8">Up to 90% Off</text>
+
+    <!-- Pill 4 -->
+    <rect x="0" y="204" width="230" height="52" rx="12" fill="#111120"/>
+    <rect x="0" y="204" width="230" height="52" rx="12" fill="none" stroke="#f5a623" stroke-width="1" stroke-opacity="0.18"/>
+    <text x="20" y="226" font-family="Syne, system-ui, sans-serif" font-weight="700" font-size="12" letter-spacing="1.5" fill="#f5a623" fill-opacity="0.7">WALLPAPERS</text>
+    <text x="20" y="244" font-family="Syne, system-ui, sans-serif" font-weight="600" font-size="14" fill="#f2f2f5" fill-opacity="0.8">Free 4K Downloads</text>
+
+    <!-- Pill 5 -->
+    <rect x="0" y="272" width="230" height="52" rx="12" fill="#111120"/>
+    <rect x="0" y="272" width="230" height="52" rx="12" fill="none" stroke="#f5a623" stroke-width="1" stroke-opacity="0.18"/>
+    <text x="20" y="294" font-family="Syne, system-ui, sans-serif" font-weight="700" font-size="12" letter-spacing="1.5" fill="#f5a623" fill-opacity="0.7">HOME &amp; LIVING</text>
+    <text x="20" y="312" font-family="Syne, system-ui, sans-serif" font-weight="600" font-size="14" fill="#f2f2f5" fill-opacity="0.8">Kitchen, Bedding &amp; More</text>
+  </g>
+
+  <!-- Bottom footer bar -->
+  <rect x="0" y="590" width="1200" height="40" fill="#f5a623" fill-opacity="0.04"/>
+  <line x1="0" y1="590" x2="1200" y2="590" stroke="#f5a623" stroke-width="0.5" stroke-opacity="0.15"/>
+
+  <!-- Footer text -->
+  <text x="100" y="612"
+    font-family="Syne, system-ui, sans-serif"
+    font-weight="600"
+    font-size="13"
+    letter-spacing="3"
+    fill="#f5a623"
+    fill-opacity="0.5">REALPICKSONLY</text>
+
+  <text x="1100" y="612"
+    font-family="Syne, system-ui, sans-serif"
+    font-weight="400"
+    font-size="13"
+    letter-spacing="1"
+    text-anchor="end"
+    fill="#f2f2f5"
+    fill-opacity="0.25">Real picks. Real value.</text>
+
+  <!-- Bottom border -->
+  <rect x="0" y="627" width="1200" height="3" fill="url(#pinkGold)" fill-opacity="0.6"/>
+</svg>
