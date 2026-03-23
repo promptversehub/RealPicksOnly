@@ -55,7 +55,7 @@ const DOM = {
 const ClickTracker = {
   _data: {},
   _storageKey: 'rpo_clicks',
-
+  
   init() {
     try {
       this._data = JSON.parse(localStorage.getItem(this._storageKey) || '{}');
@@ -66,9 +66,8 @@ const ClickTracker = {
 
   /** Total clicks = base (from products.js) + real tracked clicks */
   getTotal(productId) {
-    const base = PRODUCTS.find(p => p.id === productId)?.clicks || 0;
-    return base + (this._data[productId] || 0);
-  },
+  return PRODUCTS.find(p => p.id === productId)?.clicks || 0;
+},
 
   /** Real tracked clicks only (what real visitors have clicked) */
   getReal(productId) {
@@ -945,6 +944,7 @@ const StatsDashboard = {
 const Nav = {
   _ham: null,
   _links: null,
+  _backdrop: null,
 
   init() {
     this._ham   = DOM.q('#hamburger');
@@ -952,8 +952,9 @@ const Nav = {
 
     const self = this;
     document.addEventListener('click', function(e) {
-      const navEl = e.target.closest('[data-nav]');
-      if (navEl) { e.preventDefault(); Router.go(navEl.dataset.nav); return; }
+      if (e.target.closest('.nav-link') && self._links && self._links.classList.contains('open')) {
+  self.closeMobile();
+}
 
       if (e.target.closest('#modal-close') || e.target.id === 'modal-backdrop') {
         WallModal.close(); return;
@@ -1018,21 +1019,42 @@ const Nav = {
   },
 
   _toggleMobile() {
-    const open = !this._links.classList.contains('open');
-    this._links.classList.toggle('open', open);
-    this._ham.setAttribute('aria-expanded', String(open));
-    this._ham.classList.toggle('open', open);
-    document.body.style.overflow = open ? 'hidden' : '';
-  },
+  const open = !this._links.classList.contains('open');
+  this._links.classList.toggle('open', open);
+  this._ham.setAttribute('aria-expanded', String(open));
+  this._ham.classList.toggle('open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+  if (open) {
+    if (!this._backdrop) {
+      this._backdrop = document.createElement('div');
+      this._backdrop.id = 'nav-backdrop';
+      const self = this;
+      this._backdrop.addEventListener('click', function() { self.closeMobile(); });
+    }
+    document.body.appendChild(this._backdrop);
+    this._backdrop.getBoundingClientRect();
+    this._backdrop.classList.add('visible');
+  } else {
+    this._removeBackdrop();
+  }
+},
+
+_removeBackdrop() {
+  if (this._backdrop) {
+    this._backdrop.classList.remove('visible');
+    const bd = this._backdrop;
+    setTimeout(function() { if (bd.parentNode) bd.parentNode.removeChild(bd); }, 250);
+  }
+},
 
   closeMobile() {
-    if (!this._links) return;
-    this._links.classList.remove('open');
-    this._ham && this._ham.setAttribute('aria-expanded', 'false');
-    this._ham && this._ham.classList.remove('open');
-    document.body.style.overflow = '';
-  },
-
+  if (!this._links) return;
+  this._links.classList.remove('open');
+  this._ham && this._ham.setAttribute('aria-expanded', 'false');
+  this._ham && this._ham.classList.remove('open');
+  document.body.style.overflow = '';
+  this._removeBackdrop();
+},
   _handleSubscribe(btn) {
   const form  = btn.closest('[role="form"], .email-sub-form');
   const input = form && form.querySelector('input[type="email"]');
